@@ -5,14 +5,14 @@ import { DatabaseModule } from '@app/common';
 import { ReservationsRepository } from './reservations.repository';
 import {
   ReservationDocument,
-  ReservationsSchme,
+  ReservationsSchema,
 } from './models/reservation.schema';
 
 @Module({
   imports: [
     DatabaseModule,
     DatabaseModule.forFeature([
-      { name: ReservationDocument.name, schema: ReservationsSchme },
+      { name: ReservationDocument.name, schema: ReservationsSchema },
     ]),
   ],
   controllers: [ReservationsController],
